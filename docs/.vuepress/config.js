@@ -4,7 +4,7 @@ module.exports = {
     base : '/docs/',
     theme: 'default-prefers-color-scheme',
     markdown: {
-      lineNumbers: true // 代码块显示行号
+      lineNumbers: false // 代码块显示行号
     },
      head: [
       ['meta', {description:'简单、轻量、快速、基于依赖注入的微服务框架'}],
