@@ -17,6 +17,8 @@ module.exports = {
     themeConfig : {
       logo: 'https://mnur-prod-public.oss-cn-beijing.aliyuncs.com/0/tech/yoyogo.png',
       smoothScroll: true,
+      repo: 'https://github.com/yoyofx/yoyogo',
+      repoLabel: 'My GitHub',
       overrideTheme: 'dark',
       sidebar: [
         //   ['/快速开始.md','快速开始'],
@@ -70,9 +72,8 @@ module.exports = {
       nav : [
           { text: '首页', link: '/' },
           { text: '快速开始', link: '/快速开始.md' },
-          { text: '文档', link: '/about.md' },
-          { text: '看云镜像', link: 'https://www.kancloud.cn/chase688/orange_framework' },
-          { text: '源码', link: 'https://gitee.com/zhucheer/orange' }
+          { text: '文档', link: 'https://github.com/yoyofx/yoyogo/wiki' },
+          { text: '源码', link: 'https://github.com/yoyofx/yoyogo' }
       ],
       
     }
