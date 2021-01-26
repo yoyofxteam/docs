@@ -1,7 +1,7 @@
 # pprof 支持
 在 golang 官方包中有一个 pprof 包专门用来做性能分析； 该工具能方便的对我们的程序进行 内存，goroutine，cpu 进行分析； 使用该包时会有几个 http 接口暴露出来； 为了接入方便，YoyoGo框架已经进行了封装，通过配置文件即可开启或关闭性能分析接口。
 # 快速使用
-```golang
+```go
 YoyoGo.CreateDefaultBuilder(func(rb router.IRouterBuilder) {
         Endpoints.UsePprof(rb)
 

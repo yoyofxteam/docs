@@ -1,16 +1,17 @@
 ---
 home: true
 heroImage: https://mnur-prod-public.oss-cn-beijing.aliyuncs.com/0/tech/yoyogo.png
-heroText: 微服务框架
-tagline: 简单、轻量、快速、基于依赖注入的微服务框架
+heroText: 服务微服务,拥抱云原生
+tagline: 简单、轻量、快速，基于依赖注入的微服务框架
 actionText: 快速上手 →
-actionLink: /快速开始.md
+actionLink: /quickstart/begin.md
 features:
+- title: 设计哲学
+  details: 支持多服务类型架构宿主，Web和MVC模式兼容net.http,fasthttp、GRPC、MQ、TASK、定时任务等。
 - title: 简洁至上
-  details: 快速构建微服务项目，极少的配置，渐进式开发体验。
+  details: 提供框架级依赖注入集成，约定大于配置的渐进式开发体验，提供丰富的扩展与工具快速构建微服务项目。
 - title: 丰富服务治理能力
-  details: 各类开发工具、套件；邮件、队列、图片验证码等等，一应俱全，调用简单。
-- title: 持续维护
-  details: 项目应用于多个线上项目，持续维护更新；开发交流群：780385870
+  details: 服务注册与发现(Nacos Consoul Eureka kubernetes)、熔断、限流、可观测性(监控&日志&指标)，一应俱全。
+
 footer:  MIT License
 ---

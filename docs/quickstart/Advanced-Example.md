@@ -1,4 +1,4 @@
-```golang
+```go
 package main
 import (
 	WebApplication "github.com/yoyofx/yoyogo/web"

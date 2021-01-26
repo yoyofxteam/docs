@@ -1,22 +1,23 @@
 ## 视图配置
-```golang
+```go
 //...
 .Configure(func(app *yoyogo.WebApplicationBuilder) {
         app.UseMvc(func(builder *mvc.ControllerBuilder) {
-                 builder.AddViews(mvc.ViewOption{Pattern: "Static/templates/**"})
+                builder.AddViewsByConfig()
         }
 }
 ```
 
-## hello.tmpl 
+## hello.tpl 
+存放在在静态目录 /static/templates/ :
 ```
 <h1>{[{.name}]}</h1>
 ```
 
 ## 控制器
-```golang
+```go
 func (controller UserController) GetHtmlHello() actionresult.IActionResult {
-	return controller.View("hello.tmpl", map[string]interface{}{
+	return controller.View("hello", map[string]interface{}{
 		"name": "hello world!",
 	})
 }

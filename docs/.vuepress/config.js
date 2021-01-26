@@ -17,63 +17,84 @@ module.exports = {
     themeConfig : {
       logo: 'https://mnur-prod-public.oss-cn-beijing.aliyuncs.com/0/tech/yoyogo.png',
       smoothScroll: true,
-      repo: 'https://github.com/yoyofx/yoyogo',
-      repoLabel: 'My GitHub',
+      repo: 'https://github.com/yoyofx/',
+      repoLabel: 'GitHub',
       overrideTheme: 'dark',
       sidebar: [
-        ['quickstart/README.md','快速开始']
-        //   ['/快速开始.md','快速开始'],
-        //   ['/config/配置.md','配置'],
-        //   ['/log/日志.md','日志'],
-        //   ['/config/命令行参数.md','命令行参数'],
-        //   {
-        //       title: '请求与响应',
-        //       collapsable: false,
-        //       children: [
-        //           { title: '路由', path:'/route/路由.md'},
-        //           { title: '静态资源绑定', path:'/route/静态资源绑定.md'},
-        //           { title: '中间件', path:'/route/中间件.md'},
-        //           { title: '控制器', path:'/controller/控制器.md'},
-        //           { title: 'Session', path:'/request/Session.md'}
-        //       ]
-        //   },
-        //   {
-        //       title: '数据库',
-        //       collapsable: false,
-        //       children: [
-        //           { title: 'Mysq操作', path:'/DB/Mysq操作.md'},
-        //           { title: 'Redis操作', path:'/DB/Redis操作.md'}
-        //       ]
-        //   },
-        //   ['/view.md','视图'],
-        //   {
-        //       title: '其他',
-        //       collapsable: false,
-        //       children: [
-        //           { title: '项目目录', path:'/base/项目目录.md'},
-        //           { title: '项目编译', path:'/base/项目编译.md'},
-        //           { title: '优雅退出', path:'/base/优雅退出.md'},
-        //           { title: '平滑重启', path:'/base/平滑重启.md'},
-        //           { title: 'pprof支持', path:'/base/pprof支持.md'}
-        //       ]
-        //   },
-        //   {
-        //       title: '实用工具',
-        //       collapsable: false,
-        //       children: [
-        //           { title: '图片验证码', path:'/tools/图片验证码.md'},
-        //           { title: '简单队列', path:'/tools/简单队列.md'},
-        //           { title: '消息队列', path:'/tools/消息队列.md'},
-        //           { title: 'http请求客户端', path:'/tools/http请求客户端.md'},
-        //           { title: '文件上传', path:'/tools/文件上传.md'},
-        //           { title: '发送邮件', path:'/tools/发送邮件.md'}
-        //       ]
-        //   },
+        ['/quickstart/begin.md','快速预览'],
+        ['/quickstart/YoyoGo微服务框架入门系列-基础入门--基本概念.md','基本概念'],
+        ['/quickstart/Advanced-Example.md','代码展示'],
+       
+        {
+            title: '服务配置',
+            collapsable: true,
+            children: [
+                { title: '配置文件', path:'/configs/配置文件.md'},
+                { title: '启动参数', path:'/configs/启动参数与环境变量.md'},
+            ]
+        },
+        {
+          title: 'Web框架',
+          collapsable: false,
+          children: [
+              { title: '服务路由', path:'/web/Server-path.md'},
+              { title: '静态资源绑定', path:'/web/静态资源绑定.md'},
+
+              { title: 'JWT', path:'/web/JWT-Endpoint.md'},
+              { title: '静态资源绑定', path:'/web/健康检查.md'},
+              { 
+                title: 'MVC模式',
+                collapsable: true,
+                children: [
+                  { title: 'MVC控制器', path:'/mvc/Mvc-Controller.md'},
+                  { title: 'MVC视图', path:'/mvc/View视图.md'},
+                  { title: 'MVC过滤器', path:'/mvc/ActionFilter.md'},
+                ]
+              },
+              { 
+                title: '可观察性',
+                collapsable: true,
+                children: [
+                  { title: '可观察性-健康检查', path:'/web/健康检查.md'},
+                  { title: '可观察性-依赖检查', path:'/web/依赖检查.md'},
+                  { title: '可观察性-pprof', path:'/web/pprof.md'},
+                  { title: '可观察性-Prometheus', path:'/web/Prometheus集成.md'},
+                ]
+              },
+              { 
+                title: '中间件',
+                collapsable: true,
+                children: [
+                  { title: '自定义中间件', path:'/middlewares/自定义中间件.md'},
+                  { title: '跨域中间件', path:'/middlewares/跨域中间件.md'},
+                  { title: 'JWT验证中间件', path:'/middlewares/JWT验证中间件.md'},
+                  { title: 'RequestID中间件', path:'/middlewares/RequestID中间件.md'},
+                ]
+              },
+             
+          ]
+        },
+        {
+          title: '微服务',
+          collapsable: true,
+          children: [
+              { title: 'Nacos', path:'/microservices/ms-service-discovery.md'},
+              { title: 'Consul', path:'/microservices/naming_consul.md'},
+              { title: 'Eureka', path:'/microservices/naming_eureka.md'},
+          ]
+        },
+        ['/logs/日志.md','服务日志'],
+        {
+          title: '工具库',
+          collapsable: true,
+          children: [
+              { title: '邮件', path:'/tools/email.md'},
+          ]
+        },
       ],
       nav : [
           { text: '首页', link: '/' },
-          { text: '快速开始', link: '/快速开始.md' },
-          { text: '文档', link: 'https://github.com/yoyofx/yoyogo/wiki' },
+          { text: '文档', link: '/quickstart/begin.html' },
           { text: '源码', link: 'https://github.com/yoyofx/yoyogo' }
       ],
       

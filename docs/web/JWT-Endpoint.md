@@ -2,7 +2,7 @@
 使用**Endpoints.UseJwt** 可以为应用程序创建验证凭证Token.
 
 ## 实例
-```golang
+```go
 func main() {
 	YoyoGo.CreateDefaultBuilder(func (rb router.IRouterBuilder) {
 	         endpoints.UseJwt(rb)

@@ -1,5 +1,5 @@
 ## 服务发现
-```golang
+```go
     app.NewWebHostBuilder().
 	UseConfiguration(configuration).
 	ConfigureServices(func(serviceCollection *dependencyinjection.ServiceCollection) {
@@ -22,7 +22,7 @@ server_discovery:
 
 ### 获取服务实例
 新建一个Controller，并在GetSD函数中获取demo_dev服务的所有实例
-```golang
+```go
 type UserController struct {
 	mvc.ApiController
 	discoveryClient serverdiscovery.IServerDiscovery

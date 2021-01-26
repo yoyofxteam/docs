@@ -1,5 +1,5 @@
 # Controller定义
-```golang 
+```go
 type UserController struct {
 	mvc.ApiController
 	userAction models.IUserAction
@@ -9,6 +9,7 @@ func NewUserController(userAction models.IUserAction) *UserController {
 	return &UserController{userAction: userAction}
 }
 
+// GET URL http://localhost:8080/v1
 func (controller UserController) GetInfo() mvc.ApiResult {
 	return controller.OK(controller.userAction.Login("zhang"))
 }

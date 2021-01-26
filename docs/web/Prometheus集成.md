@@ -4,7 +4,7 @@
 ## Golang 服务程序
 **Golang**的Web程序，我使用了**YoyoGo**框架，[《 YoyoGo基于ASP.NET Core设计的Golang实现 》](https://www.cnblogs.com/maxzhang1985/p/12981989.html) 可以查看这篇文章进行了解。 最新也发布了最新的**v1.5.0**版本，下面**Prometheus**接口就是这个版本的新功能。
 想要程序能够被监控，就必须要将程序运行中的各项目指标暴露出来，提供给**Promtheus**进行信息采集，当然**Prometheus**也提供push的方式，本例中将使用拉的方式。我们可以使用**Prometheus**提供的**golang**客户端暴露自身的运行时信息。代码例子如下:
-```golang 
+```go
 import (
 	YoyoGo "github.com/yoyofx/yoyogo/web"
 	"github.com/yoyofx/yoyogo/web/context"

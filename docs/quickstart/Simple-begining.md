@@ -3,7 +3,7 @@
 go get github.com/yoyofx/yoyogo
 ```
 ## 简单的开始
-```golang 
+```go 
 package main
 import (
     WebApplication "github.com/yoyofx/yoyogo/web"
@@ -13,7 +13,7 @@ import (
 func main() {
     webHost := WebApplication.CreateDefaultBuilder(func(rb router.IRouterBuilder) {
         rb.GET("/info",func (ctx *context.HttpContext) {
-            ctx.JSON(200, context.M{"info": "ok"})
+            ctx.JSON(200, context.H{"info": "ok"})
         })
     }).Build().Run()       //default port :8080
 }
