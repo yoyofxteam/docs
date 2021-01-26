@@ -21,6 +21,7 @@ module.exports = {
       repoLabel: 'My GitHub',
       overrideTheme: 'dark',
       sidebar: [
+        ['quickstart/README.md','快速开始']
         //   ['/快速开始.md','快速开始'],
         //   ['/config/配置.md','配置'],
         //   ['/log/日志.md','日志'],
