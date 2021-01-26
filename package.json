@@ -1,0 +1,27 @@
+{
+  "name": "YoyoGoDocs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoyofxteam/YoyoGoDocs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoyofxteam/YoyoGoDocs/issues"
+  },
+  "homepage": "https://github.com/yoyofxteam/YoyoGoDocs#readme",
+  "devDependencies": {
+    "vuepress": "^1.8.0"
+  },
+  "dependencies": {
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
+  }
+}
