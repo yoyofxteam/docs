@@ -23,17 +23,23 @@ server_discovery:
 ### 获取服务实例
 新建一个Controller，并在GetSD函数中获取demo_dev服务的所有实例
 ```go
-type UserController struct {
+type SDController struct {
 	mvc.ApiController
-	discoveryClient serverdiscovery.IServerDiscovery
+	discoveryCache  servicediscovery.Cache
+	discoveryClient servicediscovery.IServiceDiscoveryClient
 }
 
-func NewUserController(sd serverdiscovery.IServerDiscovery) *UserController {
-	return &UserController{ discoveryClient: sd}
+func NewSDController(sd servicediscovery.IServiceDiscoveryClient, cache servicediscovery.Cache) *SDController {
+	return &SDController{discoveryClient: sd, discoveryCache: cache}
 }
 
-func (controller UserController) GetSD() Mvc.ApiResult {
-	serviceList := controller.discoveryClient.GetAllInstances("demo_dev")
+func (controller SDController) GetSD() mvc.ApiResult {
+	serviceList := controller.discoveryClient.GetAllInstances("yoyogo_demo_dev")
+	return controller.OK(serviceList)
+}
+
+func (controller SDController) GetServices() mvc.ApiResult {
+	serviceList, _ := controller.discoveryClient.GetAllServices()
 	return controller.OK(serviceList)
 }
 ```
