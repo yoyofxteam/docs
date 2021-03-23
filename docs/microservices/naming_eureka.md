@@ -19,7 +19,8 @@ yoyogo:
         ttl: 30     # seconds
       type: "eureka"
       metadata:
-        address: "http://localhost:5000/eureka"
+        address: 
+          - "http://localhost:5000/eureka"
 ```
 
 ### 获取服务实例
