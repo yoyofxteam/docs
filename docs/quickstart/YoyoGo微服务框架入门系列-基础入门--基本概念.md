@@ -32,12 +32,12 @@ HostBuilder本身是一个抽象概念(类)，可以衍生出多种**HostBuilder
 ## 3.RouterBuilder
 **RouterBuilder**是由**WebApplicationBuilder**衍生出来的路由定义对象，用于声明GET，POST，PUT，DELETE等类型的请求处理程序。也就是说没有创建WebHostBuilder就没有WebApplicationBuilder也就没有RouterBuilder；框架本身就是支持多种Server协议的。
 路由函数定义：
-```golang
+```go
 func(router *Router.RouterGroup) { }
 ```
 上面demo中就通过它完成了一个GET请求，并返回JSON: {"info":"ok"}.
 RouterBuilder本身还支持Group的方式，将一组API进行统一的URL定义：
-```golang
+```go
 router.Group("/v1/api", func(router *Router.RouterGroup) {
      router.GET("/info", GetInfo)
      router.GET("/hello", GetHello)
@@ -48,7 +48,7 @@ router.Group("/v1/api", func(router *Router.RouterGroup) {
 创建**HostBuilder**后，通过**Build**函数得到了最终可运行的**Host**对象(**Build().Run() **)。 创建Host对象的同时，其实也完成了Server对象的创建，Host与Server一一对应的。Host表示了一个可运行的宿主，它负责管理整个程序的生命周期；而Server则是更为具体的服务类型，比如Http，xxRPC。Server更多是一种通讯协议上的表达。
 ## 5.定制WebHostBuilder
 在上面的demo中，我们定义了一个默认的WebHostBuilder，但是它所支持的内容较少只提供了最基本的Host定义，那如何定制一个WebHostBuilder呢，如下例子：
-```golang
+```go
 func CreateCustomBuilder() *Abstractions.HostBuilder {
 	return YoyoGo.NewWebHostBuilder().
 		Configure(func(app *YoyoGo.WebApplicationBuilder) {
@@ -60,7 +60,7 @@ func CreateCustomBuilder() *Abstractions.HostBuilder {
 }
 ```
 通过定制，我们可以使用完整的HostBuilder构建函数来构建应用程序。然后通过如下例子将它运行起来：
-```golang
+```go
 package main
 import ...
 
