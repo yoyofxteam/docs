@@ -1,7 +1,7 @@
 module.exports = {
     title: 'YoyoGo',
     description: '简单、轻量、快速、基于依赖注入的微服务框架',
-    base : '/docs/',
+    base : '/',
     theme: 'default-prefers-color-scheme',
     markdown: {
       lineNumbers: false // 代码块显示行号
@@ -41,7 +41,7 @@ module.exports = {
               { title: '静态资源绑定', path:'/web/静态资源绑定.md'},
 
               { title: 'JWT', path:'/web/JWT-Endpoint.md'},
-              { title: '静态资源绑定', path:'/web/健康检查.md'},
+              { title: '健康检查', path:'/web/健康检查.md'},
               { 
                 title: 'MVC模式',
                 collapsable: true,
@@ -75,9 +75,10 @@ module.exports = {
           ]
         },
         {
-          title: '微服务',
+          title: '微服务-服务发现',
           collapsable: true,
           children: [
+              { title: 'Etcd', path:'/microservices/naming_etcd.md'},
               { title: 'Nacos', path:'/microservices/ms-service-discovery.md'},
               { title: 'Consul', path:'/microservices/naming_consul.md'},
               { title: 'Eureka', path:'/microservices/naming_eureka.md'},

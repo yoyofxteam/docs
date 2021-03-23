@@ -1,23 +1,27 @@
 ## 服务发现
 ```go
-    app.NewWebHostBuilder().
+app.NewWebHostBuilder().
 	UseConfiguration(configuration).
 	ConfigureServices(func(serviceCollection *dependencyinjection.ServiceCollection) {
-                // 依赖注入 Consul 服务发现组件
+        // 依赖注入 Consul 服务发现组件
 		Consul.UseServiceDiscovery(serviceCollection)
-        }).Build().Run()
+ }).Build().Run()
 ```
 ### consul配置：
 ```yaml
-application:
-  name: demo_dev
-  metadata: "develop"
-server_discovery:
-  type: "consul"
-  metadata:
-     address: "localhost:8500"
-     health_check: "/actuator/health"
-     tags: [""]
+yoyogo:
+  application:
+    name: demo_dev
+    metadata: "develop"
+  cloud:
+    discovery:
+      cache:
+        ttl: 30     # seconds 服务列表缓存时间 （秒）
+	  type: "consul"
+	  metadata:
+		address: "localhost:8500"
+		health_check: "/actuator/health"
+		tags: [""]
 ```
 
 ### 获取服务实例

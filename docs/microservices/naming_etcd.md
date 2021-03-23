@@ -9,20 +9,24 @@
 ```
 ### Nacos配置：
 ```yaml
-application:
-  name: demo_dev
-  metadata: "develop"
-server_discovery:
-  type: "etcd"
-  metadata:
-  address:
-    - "81.70.154.55:32379"
-  namespace: "public"
-  ttl: 60
-  auth:
-    enable: true
-    username: "root"
-    password: "5z1fLbYw8A"
+yoyogo:
+  application:
+    name: demo_dev
+    metadata: "develop"
+  cloud:
+    discovery:
+      cache:
+        ttl: 30     # seconds 服务列表缓存时间 （秒）
+      type: "etcd"
+      metadata:
+      address:
+        - "localhost:32379"
+      namespace: "public"
+      ttl: 60
+      auth:
+        enable: true
+        username: "root"
+        password: "5z1fLbYw8A"
 ```
 
 ### 获取服务实例

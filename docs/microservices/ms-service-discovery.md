@@ -9,21 +9,25 @@
 ```
 ### Nacos配置：
 ```yaml
-application:
-  name: demo_dev
-  metadata: "develop"
-server_discovery:
-  type: "nacos"
-  metadata:
-    url: "localhost"   #local1;local2 使用";"分隔.
-    port: 8848
-    namespace: "a3ae02e6-79e9-4150-bcfd-93eb8f9b0235"
-    group: "mygroup1"
-    cluster: ""
-    auth:
-      enable: true
-      username: "root"
-      password: "1234"
+yoyogo:
+  application:
+    name: demo_dev
+    metadata: "develop"
+  cloud:
+    discovery:
+      cache:
+        ttl: 30     # seconds 服务列表缓存时间 （秒）
+      type: "nacos"
+      metadata:
+        url: "localhost"   #local1;local2 使用";"分隔.
+        port: 8848
+        namespace: "a3ae02e6-79e9-4150-bcfd-93eb8f9b0235"
+        group: "mygroup1"
+        cluster: ""
+        auth:
+          enable: true
+          username: "root"
+          password: "1234"
 ```
 
 ### 获取服务实例

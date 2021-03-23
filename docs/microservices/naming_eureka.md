@@ -1,21 +1,25 @@
 ## 服务发现
 ```go
-    app.NewWebHostBuilder().
+app.NewWebHostBuilder().
 	UseConfiguration(configuration).
 	ConfigureServices(func(serviceCollection *dependencyinjection.ServiceCollection) {
-                // 依赖注入 Eureka 服务发现组件
+    // 依赖注入 Eureka 服务发现组件
 		eureka.UseServiceDiscovery(serviceCollection)
-        }).Build().Run()
+ }).Build().Run()
 ```
 ### eureka配置：
 ```yaml
-application:
-  name: demo_dev
-  metadata: "develop"
-server_discovery:
-  type: "eureka"
-  metadata:
-     address: "http://localhost:5000/eureka"
+yoyogo:
+  application:
+    name: demo_dev
+    metadata: "develop"
+  cloud:
+    discovery:
+      cache:
+        ttl: 30     # seconds
+      type: "eureka"
+      metadata:
+        address: "http://localhost:5000/eureka"
 ```
 
 ### 获取服务实例
