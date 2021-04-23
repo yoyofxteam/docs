@@ -17,6 +17,7 @@ yoyogo:
     discovery:
       cache:
         ttl: 30     # seconds 服务列表缓存时间 （秒）
+      register-enable: true  # 是否注册自身  (默认true ,非必填)
       type: "nacos"
       metadata:
         url: "localhost"   #local1;local2 使用";"分隔.
