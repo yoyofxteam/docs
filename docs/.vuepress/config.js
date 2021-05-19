@@ -31,11 +31,13 @@ module.exports = {
             children: [
                 { title: '配置文件', path:'/configs/配置文件.md'},
                 { title: '启动参数', path:'/configs/启动参数与环境变量.md'},
+                { title: 'Nacos集成', path:'/configs/nacos集成.md'},
+                { title: 'Nacos与Viper', path:'/configs/nacos-viper.md'},
             ]
         },
         {
-          title: 'Web框架',
-          collapsable: false,
+          title: 'Web Hosting',
+          collapsable: true,
           children: [
               { title: '服务路由', path:'/web/Server-path.md'},
               { title: '静态资源绑定', path:'/web/静态资源绑定.md'},
@@ -75,6 +77,21 @@ module.exports = {
           ]
         },
         {
+          title: 'gRPC Hosting',
+          collapsable: true,
+          children: [
+              { title: '开始', path:'/grpc/help.md'}
+          ]
+        },
+        {
+          title: 'Console Hosting',
+          collapsable: true,
+          children: [
+            { title: 'console', path:'/console/help.md'},
+            { title: 'xxl-job', path:'/console/xxl-job.md'},
+          ]
+        },
+        {
           title: '微服务-服务发现',
           collapsable: true,
           children: [
@@ -82,6 +99,13 @@ module.exports = {
               { title: 'Nacos', path:'/microservices/ms-service-discovery.md'},
               { title: 'Consul', path:'/microservices/naming_consul.md'},
               { title: 'Eureka', path:'/microservices/naming_eureka.md'},
+          ]
+        },
+        {
+          title: '高级特性',
+          collapsable: true,
+          children: [
+              { title: '扩展点 - HostService接口', path:'/extendpoint/hostservice.md'},
           ]
         },
         ['/logs/日志.md','服务日志'],

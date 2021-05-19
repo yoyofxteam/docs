@@ -52,7 +52,7 @@ go env -w GOPROXY=https://goproxy.cn,direct
 go mod vendor       // 将依赖包拷贝到项目目录中去
 ```
 # 简单的例子
-```golang
+```go
 package main
 import ...
 

@@ -1,6 +1,6 @@
 # ActionFiler
 ActionFilter只应用于MVC模式，使用UseMvc开启Mvc中间件；在ControllerBuilder中创建Filter. 支持正则表达式与统配符*.
-```golang
+```go
 func CreateCustomBuilder() *abstractions.HostBuilder {
         configuration := abstractions.NewConfigurationBuilder().
 		AddEnvironment().
@@ -18,7 +18,7 @@ func CreateCustomBuilder() *abstractions.HostBuilder {
 ```
 # ActionFilter定义
 它实现了IActionFilter接口，如下是它的实例定义.
-```golang
+```go
 type TestActionFilter struct {
 }
 

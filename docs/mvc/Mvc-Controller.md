@@ -16,7 +16,7 @@ func (controller UserController) GetInfo() mvc.ApiResult {
 
 ```
 # Main.go
-```golang
+```go
 package main
 import (
 	yoyogo "github.com/yoyofx/yoyogo/web"
