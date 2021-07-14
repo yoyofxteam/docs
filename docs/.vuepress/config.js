@@ -105,6 +105,7 @@ module.exports = {
           title: '高级特性',
           collapsable: true,
           children: [
+              { title: '依赖注入 - dependencyinjection', path:'/extendpoint/di.md'},
               { title: '扩展点 - HostService接口', path:'/extendpoint/hostservice.md'},
           ]
         },
@@ -113,6 +114,7 @@ module.exports = {
           title: '工具库',
           collapsable: true,
           children: [
+              { title: 'yygctl', path:'/tools/cli.md'},
               { title: '邮件', path:'/tools/email.md'},
           ]
         },
