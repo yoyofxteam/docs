@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/yoyofxteam/YoyoGoDocs#readme",
   "devDependencies": {
-    "vuepress": "^1.8.0"
+    "vuepress": "^1.9.7"
   },
   "dependencies": {
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"

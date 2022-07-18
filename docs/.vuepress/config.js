@@ -30,6 +30,7 @@ module.exports = {
             collapsable: true,
             children: [
                 { title: '配置文件', path:'/configs/配置文件.md'},
+                { title: '配置对象DSL', path:'/configs/配置对象与DSL.md'},
                 { title: '启动参数', path:'/configs/启动参数与环境变量.md'},
                 { title: 'Nacos集成', path:'/configs/nacos集成.md'},
                 { title: 'Nacos与Viper', path:'/configs/nacos-viper.md'},
